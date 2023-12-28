@@ -14,13 +14,13 @@ class X1DetectorConstruction(G4VUserDetectorConstruction):
 
         nist = G4NistManager.Instance()
 
-        envelop_x = 100*cm
-        envelop_y = 100*cm
-        envelop_z = 100*cm
+        envelop_x = 20*cm
+        envelop_y = 20*cm
+        envelop_z = 20*cm
 
         envelop_mat = nist.FindOrBuildMaterial("G4_AIR")
 
-        sphere_rad = 25*cm
+        sphere_rad = 7*cm
         mat = nist.FindOrBuildMaterial("G4_WATER")
 
 
