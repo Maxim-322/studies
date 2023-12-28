@@ -20,15 +20,15 @@ class X1DetectorConstruction(G4VUserDetectorConstruction):
 
         envelop_mat = nist.FindOrBuildMaterial("G4_AIR")
 
-        sphere_rad = 7*cm
+        sphere_rad = 0.9/2*envelop_x
         mat = nist.FindOrBuildMaterial("G4_WATER")
 
 
         checkOverlaps = True
 
-        world_x = 2*envelop_x
-        world_y = 2*envelop_y
-        world_z = 2*envelop_z
+        world_x = 1.2*envelop_x
+        world_y = 1.2*envelop_y
+        world_z = 1.2*envelop_z
 
         sWorld = G4Box("World", 0.5*world_x, 0.5*world_y,
                     0.5*world_z)
