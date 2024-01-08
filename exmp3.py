@@ -13,9 +13,9 @@ class X3DetectorConstruction(G4VUserDetectorConstruction):
    def Construct(self):
         nist = G4NistManager.Instance()
 
-        envelop_x = 50*cm
-        envelop_y = 50*cm
-        envelop_z = 50*cm
+        envelop_x = 36*cm
+        envelop_y = 36*cm
+        envelop_z = 36*cm
 
         envelop_mat = nist.FindOrBuildMaterial("G4_AIR")
 
@@ -29,9 +29,9 @@ class X3DetectorConstruction(G4VUserDetectorConstruction):
 
         checkOverlaps = True
 
-        world_x = 2*envelop_x
-        world_y = 2*envelop_y
-        world_z = 2*envelop_z
+        world_x = 1.2*envelop_x
+        world_y = 1.2*envelop_y
+        world_z = 1.2*envelop_z
 
         sWorld = G4Box("World", 0.5*world_x, 0.5*world_y,
                     0.5*world_z)
