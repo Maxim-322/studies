@@ -36,9 +36,9 @@ class X5DetectorConstruction(G4VUserDetectorConstruction):
 
         checkOverlaps = True
 
-        world_x = 2*envelop_x
-        world_y = 2*envelop_y
-        world_z = 2*envelop_z
+        world_x = 1.2*envelop_x
+        world_y = 1.2*envelop_y
+        world_z = 1.2*envelop_z
 
         sWorld = G4Box("World", 0.5*world_x, 0.5*world_y, 0.5*world_z)
         lWorld = G4LogicalVolume(sWorld, envelop_mat, "World")
