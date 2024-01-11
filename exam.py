@@ -74,8 +74,8 @@ class EXAMPrimaryGeneratorAction(G4VUserPrimaryGeneratorAction):
         particleTable = G4ParticleTable.GetParticleTable()
         particle = particleTable.FindParticle("e+")
         self.fParticleGun.SetParticleDefinition(particle)
-        self.fParticleGun.SetParticleMomentumDirection(G4ThreeVector(1,1,0))
-        self.fParticleGun.SetParticleEnergy(0.4*MeV)
+        self.fParticleGun.SetParticleMomentumDirection(G4ThreeVector(1,0,0))
+        self.fParticleGun.SetParticleEnergy(0.4*keV)
 
     def GeneratePrimaries(self, anEvent):
         envSizeX = 0
@@ -99,7 +99,7 @@ class EXAMPrimaryGeneratorAction(G4VUserPrimaryGeneratorAction):
                 G4Exception("XXPrimaryGeneratorAction::GeneratePrimaries()","MyCode0002", G4ExceptionSeverity.JustWarning, msg)
 
             x0 = -0.5 * envSizeX
-            y0 = -0.5 * envSizeY
+            y0 = 0
             z0 = 0
  
             self.fParticleGun.SetParticlePosition(G4ThreeVector(x0, y0, z0))
