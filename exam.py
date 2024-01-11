@@ -75,7 +75,7 @@ class EXAMPrimaryGeneratorAction(G4VUserPrimaryGeneratorAction):
         particle = particleTable.FindParticle("e+")
         self.fParticleGun.SetParticleDefinition(particle)
         self.fParticleGun.SetParticleMomentumDirection(G4ThreeVector(1,0,0))
-        self.fParticleGun.SetParticleEnergy(0.4*keV)
+        self.fParticleGun.SetParticleEnergy(400*keV)
 
     def GeneratePrimaries(self, anEvent):
         envSizeX = 0
